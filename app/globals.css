@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Space Grotesk", sans-serif;
+
+  --color-secondary: #00E5FF;
+  --color-secondary-container: #004D56;
+  --color-surface-container-low: #0B0F19;
+  --color-surface-container-lowest: #050810;
+  --color-on-surface-variant: #8F9BB3;
+  --color-on-tertiary-container: #CE93D8;
+  --color-surface: #0E1424;
+  --color-primary: #7C4DFF;
+  --color-slate-900: #0A0F1D;
+  --color-slate-950: #030509;
+}
+
+body {
+  background-color: #030509;
+  color: #EDF1F7;
+}
+
+.diagnostic-grid {
+  background-image: radial-gradient(circle at 2px 2px, rgba(124, 77, 255, 0.1) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+.surgical-glow {
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.2), 0 0 40px rgba(124, 77, 255, 0.1);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-panel {
+  background: rgba(10, 15, 29, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.glow-orb-primary {
+  background: radial-gradient(circle, rgba(124,77,255,0.8) 0%, rgba(124,77,255,0) 70%);
+}
+
+.glow-orb-secondary {
+  background: radial-gradient(circle, rgba(0,229,255,0.8) 0%, rgba(0,229,255,0) 70%);
+}
+
+.ghost-border {
+  outline: 1px solid rgba(255, 255, 255, 0.08);
+}
