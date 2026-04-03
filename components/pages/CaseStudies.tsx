@@ -16,7 +16,7 @@ const CaseStudiesHero = () => (
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/10 border-l-2 border-secondary mb-6 mx-auto">
           <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary font-label">Work & Capabilities</span>
         </div>
-        <h1 className="text-5xl md:text-7xl font-extrabold font-headline tracking-tight text-slate-900 mb-6">
+        <h1 className="text-5xl md:text-7xl font-extrabold font-headline tracking-tight text-white mb-6">
           Sectors, services and <span className="text-secondary">delivery areas.</span>
         </h1>
         <p className="text-xl text-on-surface-variant leading-relaxed font-body">
@@ -28,17 +28,17 @@ const CaseStudiesHero = () => (
 );
 
 const CapabilityCard = ({ icon: Icon, title, description, sectors, color, visual }: any) => (
-  <motion.div whileHover={{ y: -10 }} className="bg-white border border-slate-200 overflow-hidden group flex flex-col h-full">
+  <motion.div whileHover={{ y: -10 }} className="glass-card overflow-hidden group flex flex-col h-full">
     <div className="relative h-64 overflow-hidden">
       <BusinessAreaVisual variant={visual} />
-      <div className="absolute top-4 left-4 flex items-center gap-2 bg-white/90 px-3 py-2">
+      <div className="absolute top-4 left-4 flex items-center gap-2 bg-black/55 backdrop-blur-md border border-white/10 px-3 py-2">
         <Icon size={16} className="text-secondary" />
         <span className={`text-[10px] font-bold uppercase tracking-widest font-label ${color}`}>{title}</span>
       </div>
     </div>
     <div className="p-8 flex-grow flex flex-col">
       <p className="text-on-surface-variant font-body text-sm leading-relaxed mb-8 flex-grow">{description}</p>
-      <div className="grid grid-cols-2 gap-4 mb-8 py-6 border-y border-slate-100">
+      <div className="grid grid-cols-2 gap-4 mb-8 py-6 border-y border-white/10">
         {sectors.map((sector: string, i: number) => (
           <div key={i}>
             <div className="text-xs font-bold font-label text-slate-400 uppercase tracking-widest mb-1">Sector</div>
@@ -46,7 +46,7 @@ const CapabilityCard = ({ icon: Icon, title, description, sectors, color, visual
           </div>
         ))}
       </div>
-      <Link href="/contact" className="flex items-center gap-2 font-label text-xs font-bold uppercase tracking-widest group-hover:gap-4 transition-all">
+      <Link href="/contact" className="flex items-center gap-2 font-label text-xs font-bold uppercase tracking-widest text-secondary group-hover:gap-4 transition-all">
         Discuss a similar project <ArrowRight size={16} />
       </Link>
     </div>
@@ -74,7 +74,7 @@ export default function CaseStudies() {
       icon: Smartphone,
       title: 'Mobile applications',
       description: 'We develop robust Android, iOS and cross-platform React Native mobile applications equipped for content delivery, retail management, utilities and gaming.',
-      color: 'text-slate-900',
+      color: 'text-white',
       visual: 'mobile',
       sectors: ['Android', 'iOS'],
     },
@@ -104,17 +104,17 @@ export default function CaseStudies() {
       : portfolioData.filter((item) => item.category === activeTab);
 
     return (
-      <section className="py-24 bg-surface-container-low border-t border-slate-200/10">
+      <section className="py-24 bg-surface-container-low border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
-            <h2 className="text-4xl font-extrabold font-headline mb-4 tracking-tight">Work Directory</h2>
+            <h2 className="text-4xl font-extrabold font-headline mb-4 tracking-tight text-white">Work Directory</h2>
             <p className="text-on-surface-variant font-body mb-8">A comprehensive collection of our live projects, references and digital builds.</p>
             
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => setActiveTab('All')}
                 className={`px-4 py-2 rounded-full font-label text-xs font-bold uppercase tracking-widest transition-all ${
-                  activeTab === 'All' ? 'bg-slate-900 text-white shadow-md' : 'bg-white text-slate-500 hover:bg-slate-100 ghost-border'
+                  activeTab === 'All' ? 'bg-secondary text-white shadow-md' : 'bg-white/5 text-slate-400 hover:bg-white/10 border border-white/10'
                 }`}
               >
                 All Projects
@@ -124,7 +124,7 @@ export default function CaseStudies() {
                   key={cat.name}
                   onClick={() => setActiveTab(cat.name)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-full font-label text-xs font-bold uppercase tracking-widest transition-all ${
-                    activeTab === cat.name ? 'bg-secondary text-white shadow-md' : 'bg-white text-slate-500 hover:bg-slate-100 ghost-border'
+                    activeTab === cat.name ? 'bg-secondary text-white shadow-md' : 'bg-white/5 text-slate-400 hover:bg-white/10 border border-white/10'
                   }`}
                 >
                   <cat.icon size={14} />
@@ -151,18 +151,18 @@ export default function CaseStudies() {
                     target="_blank"
                     rel="noopener noreferrer"
                     key={item.url + idx}
-                    className="bg-white p-6 rounded-2xl ghost-border hover:shadow-xl hover:-translate-y-1 hover:border-secondary transition-all group flex flex-col justify-between min-h-[160px]"
+                    className="glass-card p-6 rounded-2xl hover:shadow-xl hover:-translate-y-1 hover:border-secondary transition-all group flex flex-col justify-between min-h-[160px]"
                   >
                     <div>
                       <div className="flex justify-between items-start mb-4">
-                        <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors">
+                        <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors">
                           <Icon size={18} />
                         </div>
                         <ExternalLink size={16} className="text-slate-300 group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
                       </div>
-                      <h3 className="font-headline font-bold text-slate-900 text-lg line-clamp-2 pr-4">{item.name}</h3>
+                      <h3 className="font-headline font-bold text-white text-lg line-clamp-2 pr-4">{item.name}</h3>
                     </div>
-                    <div className="mt-4 pt-4 border-t border-slate-100">
+                    <div className="mt-4 pt-4 border-t border-white/10">
                       <span className="font-label text-[10px] font-bold uppercase tracking-widest text-slate-400">{item.category}</span>
                     </div>
                   </motion.a>
@@ -176,9 +176,9 @@ export default function CaseStudies() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-[#030509] text-slate-100">
       <CaseStudiesHero />
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-surface-container-low">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {cards.map((item, i) => (

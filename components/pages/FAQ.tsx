@@ -12,7 +12,7 @@ const FAQHero = () => (
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/10 border-l-2 border-secondary mb-6">
           <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary font-label">Frequently Asked Questions</span>
         </div>
-        <h1 className="text-5xl md:text-7xl font-extrabold font-headline tracking-tight text-slate-900 mb-6">
+        <h1 className="text-5xl md:text-7xl font-extrabold font-headline tracking-tight text-white mb-6">
           Common <span className="text-secondary">service questions</span>
         </h1>
         <p className="text-xl text-on-surface-variant leading-relaxed font-body">
@@ -27,11 +27,11 @@ const FAQItem: React.FC<{ question: string; answer: string; index: number }> = (
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-white ghost-border group mb-4">
-      <button onClick={() => setIsOpen(!isOpen)} className="w-full p-6 flex justify-between items-center cursor-pointer hover:bg-slate-50 transition-colors text-left">
+    <div className="glass-card group mb-4">
+      <button onClick={() => setIsOpen(!isOpen)} className="w-full p-6 flex justify-between items-center cursor-pointer hover:bg-white/5 transition-colors text-left rounded-[inherit]">
         <div className="flex items-center gap-4">
           <span className="font-label text-secondary font-bold text-xs opacity-50">{String(index + 1).padStart(2, '0')}</span>
-          <h3 className="font-bold text-slate-900 font-headline">{question}</h3>
+          <h3 className="font-bold text-white font-headline">{question}</h3>
         </div>
         <div className={`text-slate-400 group-hover:text-secondary transition-colors ${isOpen ? 'rotate-180' : ''}`}>
           {isOpen ? <Minus size={20} /> : <Plus size={20} />}
@@ -87,7 +87,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-[#030509]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-12">
           <div className="xl:col-span-3">
@@ -96,8 +96,8 @@ const FAQSection = () => {
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`w-full text-left px-4 py-3 transition-all font-bold font-label text-xs uppercase tracking-widest cursor-pointer ${
-                    activeCategory === cat ? 'bg-white shadow-sm border-l-4 border-secondary text-secondary' : 'text-slate-400 hover:text-slate-600'
+                  className={`w-full text-left px-4 py-3 transition-all font-bold font-label text-xs uppercase tracking-widest cursor-pointer rounded-lg ${
+                    activeCategory === cat ? 'glass-panel border-l-4 border-secondary text-secondary' : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
                   }`}
                 >
                   {cat}
@@ -107,8 +107,8 @@ const FAQSection = () => {
           </div>
           <div className="xl:col-span-9">
             <div className="flex items-center gap-4 mb-8">
-              <h2 className="font-headline text-2xl font-bold text-slate-900">{activeCategory}</h2>
-              <div className="h-[1px] flex-1 bg-slate-100"></div>
+              <h2 className="font-headline text-2xl font-bold text-white">{activeCategory}</h2>
+              <div className="h-[1px] flex-1 bg-white/10"></div>
             </div>
             <div className="space-y-4">
               {faqs[activeCategory]?.map((faq, i) => (
@@ -130,8 +130,8 @@ const FAQSection = () => {
                   <HelpCircle size={180} />
                 </div>
               </div>
-              <div className="bg-slate-50 p-8 border-l-4 border-on-tertiary-container">
-                <h4 className="text-slate-900 font-headline text-xl font-bold mb-3">Need project advice?</h4>
+              <div className="glass-card p-8 border-l-4 border-on-tertiary-container">
+                <h4 className="text-white font-headline text-xl font-bold mb-3">Need project advice?</h4>
                 <div className="space-y-4">
                   <p className="text-sm text-on-surface-variant font-body">If your question is specific to your own business, the best next step is to send your project brief through the contact page.</p>
                   <Link href="/contact" className="inline-flex bg-secondary text-white px-6 py-3 font-bold tracking-tight hover:shadow-xl transition-all cursor-pointer">
@@ -148,10 +148,10 @@ const FAQSection = () => {
 };
 
 const FAQCTA = () => (
-  <section className="py-24 bg-white">
-    <div className="max-w-4xl mx-auto px-6 text-center ghost-border p-12">
-      <h3 className="font-headline text-3xl font-black text-slate-900 mb-4">Need a direct discussion?</h3>
-      <p className="text-slate-500 mb-8 max-w-lg mx-auto font-body">If your question is not covered here, send your requirement and we will respond with a more specific recommendation.</p>
+  <section className="py-24 bg-surface-container-low">
+    <div className="max-w-4xl mx-auto px-6 text-center glass-card p-12">
+      <h3 className="font-headline text-3xl font-black text-white mb-4">Need a direct discussion?</h3>
+      <p className="text-slate-400 mb-8 max-w-lg mx-auto font-body">If your question is not covered here, send your requirement and we will respond with a more specific recommendation.</p>
       <div className="flex flex-wrap justify-center gap-4">
         <Link href="/contact" className="bg-secondary text-white px-8 py-4 font-bold tracking-tight hover:shadow-xl hover:shadow-secondary/20 transition-all cursor-pointer">
           Contact Internet Doctors
@@ -163,7 +163,7 @@ const FAQCTA = () => (
 
 export default function FAQ() {
   return (
-    <div className="bg-white">
+    <div className="bg-[#030509] text-slate-100">
       <FAQHero />
       <FAQSection />
       <FAQCTA />

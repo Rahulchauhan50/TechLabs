@@ -24,7 +24,7 @@ const ServicesHero = () => (
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/10 border-l-2 border-secondary mb-6">
           <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary font-label">Our Services</span>
         </div>
-        <h1 className="text-5xl md:text-7xl font-extrabold font-headline tracking-tight text-slate-900 mb-6">
+        <h1 className="text-5xl md:text-7xl font-extrabold font-headline tracking-tight text-white mb-6">
           Practical <span className="text-secondary">digital services</span> for growing businesses.
         </h1>
         <p className="text-xl text-on-surface-variant leading-relaxed font-body">
@@ -36,7 +36,7 @@ const ServicesHero = () => (
 );
 
 const ServiceDetail = ({ icon: Icon, title, subtitle, description, features, visual, href, reverse = false }: any) => (
-  <section className={`py-24 ${reverse ? 'bg-surface-container-low' : 'bg-white'}`}>
+  <section className={`py-24 ${reverse ? 'bg-surface-container-low' : 'bg-[#030509]'}`}>
     <div className="max-w-7xl mx-auto px-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className={reverse ? 'lg:order-2' : ''}>
@@ -46,13 +46,13 @@ const ServiceDetail = ({ icon: Icon, title, subtitle, description, features, vis
             </div>
             <span className="font-label text-xs font-bold uppercase tracking-widest text-secondary">{subtitle}</span>
           </div>
-          <h2 className="text-4xl font-extrabold font-headline tracking-tight mb-6">{title}</h2>
+          <h2 className="text-4xl font-extrabold font-headline tracking-tight mb-6 text-white">{title}</h2>
           <p className="text-lg text-on-surface-variant font-body leading-relaxed mb-8">{description}</p>
           <ul className="space-y-4 mb-10">
             {features.map((feature: string, i: number) => (
               <li key={i} className="flex items-start gap-3">
                 <ShieldCheck className="text-secondary mt-1 shrink-0" size={18} />
-                <span className="font-body text-slate-700">{feature}</span>
+                <span className="font-body text-slate-300">{feature}</span>
               </li>
             ))}
           </ul>
@@ -60,7 +60,7 @@ const ServiceDetail = ({ icon: Icon, title, subtitle, description, features, vis
             Discuss Your Requirement <ArrowRight size={20} />
           </Link>
           {href && (
-            <Link href={href} className="inline-block mt-4 text-xs font-bold font-label uppercase tracking-widest text-slate-400 hover:text-secondary transition-colors">
+            <Link href={href} className="inline-block mt-4 text-xs font-bold font-label uppercase tracking-widest text-slate-500 hover:text-secondary transition-colors">
               Learn more →
             </Link>
           )}
@@ -91,7 +91,7 @@ const ProcessSection = () => (
           { step: '04', title: 'Improve', desc: 'Launch, support, optimize and expand as the business grows.' },
         ].map((item, i) => (
           <div key={i} className="relative z-10 bg-slate-900 p-8 border border-slate-800 hover:border-secondary transition-colors group">
-            <div className="text-5xl font-black font-headline text-slate-800 group-hover:text-secondary/20 transition-colors mb-6">{item.step}</div>
+            <div className="text-5xl font-black font-headline text-white/15 group-hover:text-secondary/20 transition-colors mb-6">{item.step}</div>
             <h3 className="text-xl font-bold font-headline mb-3">{item.title}</h3>
             <p className="text-sm text-slate-400 font-body leading-relaxed">{item.desc}</p>
           </div>
@@ -200,7 +200,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-[#030509] text-slate-100">
       <ServicesHero />
       {services.map((service, i) => (
         <ServiceDetail key={i} {...service} />

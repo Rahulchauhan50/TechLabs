@@ -20,7 +20,7 @@ const WebHero = () => (
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/10 border-l-2 border-secondary mb-6">
           <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary font-label">Website Design & Development</span>
         </div>
-        <h1 className="text-5xl md:text-7xl font-extrabold font-headline tracking-tight text-slate-900 mb-6">
+        <h1 className="text-5xl md:text-7xl font-extrabold font-headline tracking-tight text-white mb-6">
           High-performance <span className="text-secondary">websites</span> built to scale.
         </h1>
         <p className="text-xl text-on-surface-variant leading-relaxed font-body mb-8">
@@ -62,17 +62,17 @@ const FeatureList = () => {
     <section className="py-24 bg-surface-container-low">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold font-headline tracking-tight mb-4">End-to-End Web Solutions</h2>
+          <h2 className="text-4xl font-extrabold font-headline tracking-tight mb-4 text-white">End-to-End Web Solutions</h2>
           <div className="h-1 w-20 bg-secondary mx-auto"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((item, i) => (
-             <motion.div key={i} whileHover={{ y: -5 }} className="bg-white p-8 ghost-border relative overflow-hidden group">
-                <div className="w-12 h-12 bg-slate-50 flex items-center justify-center text-secondary mb-6">
+             <motion.div key={i} whileHover={{ y: -5 }} className="glass-card p-8 relative overflow-hidden group">
+                <div className="w-12 h-12 bg-white/10 flex items-center justify-center text-secondary mb-6">
                   <item.icon size={24} />
                 </div>
-                <h3 className="text-xl font-bold font-headline mb-3">{item.title}</h3>
-                <p className="text-sm text-slate-500 font-body leading-relaxed">{item.desc}</p>
+                <h3 className="text-xl font-bold font-headline mb-3 text-white">{item.title}</h3>
+                <p className="text-sm text-slate-400 font-body leading-relaxed">{item.desc}</p>
              </motion.div>
           ))}
         </div>
@@ -82,12 +82,12 @@ const FeatureList = () => {
 };
 
 const HighlightSection = () => (
-  <section className="py-24 bg-white">
+  <section className="py-24 bg-[#030509]">
     <div className="max-w-7xl mx-auto px-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>
            <div className="font-label text-[10px] text-secondary font-bold uppercase tracking-widest mb-4">Why choose us</div>
-           <h2 className="text-4xl md:text-5xl font-extrabold font-headline tracking-tight mb-6">Built for speed, security, and search visibility.</h2>
+           <h2 className="text-4xl md:text-5xl font-extrabold font-headline tracking-tight mb-6 text-white">Built for speed, security, and search visibility.</h2>
            <p className="text-lg text-on-surface-variant font-body leading-relaxed mb-8">
              Every website we launch goes through rigorous performance testing. From adhering to the latest web accessibility standards to optimizing the codebase for search engines, we deliver complete solutions out of the box.
            </p>
@@ -100,7 +100,7 @@ const HighlightSection = () => (
              ].map((point, i) => (
                <li key={i} className="flex items-start gap-3">
                  <CheckCircle2 className="text-secondary mt-1 shrink-0" size={18} />
-                 <span className="font-body text-slate-700">{point}</span>
+                 <span className="font-body text-slate-300">{point}</span>
                </li>
              ))}
            </ul>
@@ -116,7 +116,7 @@ const HighlightSection = () => (
 
 export default function WebsiteDesign() {
   return (
-    <div className="bg-white">
+    <div className="bg-[#030509] text-slate-100">
       <WebHero />
       <FeatureList />
       <HighlightSection />
@@ -130,7 +130,7 @@ export default function WebsiteDesign() {
             <Link href="/contact" className="bg-secondary text-white px-10 py-4 font-headline font-bold text-lg hover:bg-secondary/90 transition-all cursor-pointer">
               Contact Our Engineers
             </Link>
-            <Link href="/services" className="bg-slate-800 text-white px-10 py-4 font-headline font-bold text-lg hover:bg-slate-700 transition-all cursor-pointer">
+            <Link href="/services" className="glass-panel text-white border border-white/20 px-10 py-4 font-headline font-bold text-lg hover:bg-white/10 transition-all cursor-pointer">
               View All Services
             </Link>
           </div>

@@ -32,18 +32,18 @@ const Hero = () => (
         </p>
         <div className="flex gap-4">
           <Link href="/contact" className="bg-primary text-white px-8 py-4 text-sm font-label font-bold uppercase tracking-widest active:scale-95 transition-all cursor-pointer">Start a Project</Link>
-          <Link href="/services" className="bg-surface-container-high text-on-surface px-8 py-4 text-sm font-label font-bold uppercase tracking-widest active:scale-95 transition-all cursor-pointer">View Services</Link>
+          <Link href="/services" className="glass-panel text-white border border-white/20 px-8 py-4 text-sm font-label font-bold uppercase tracking-widest active:scale-95 transition-all cursor-pointer hover:bg-white/10">View Services</Link>
         </div>
       </motion.div>
       <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} className="relative">
         <div className="absolute -inset-4 bg-secondary/5 blur-3xl rounded-full"></div>
         <TeamCollaborationVisual />
-        <div className="absolute -bottom-8 -left-8 glass-card p-6 shadow-xl border border-white/20 hidden md:block bg-white/70 backdrop-blur-xl">
+        <div className="absolute -bottom-8 -left-8 glass-card p-6 shadow-xl border border-white/20 hidden md:block backdrop-blur-xl">
           <div className="flex items-center gap-4">
             <div className="h-12 w-1 bg-secondary"></div>
             <div>
               <div className="font-label text-xs font-bold text-secondary uppercase">Working Style</div>
-              <div className="font-label text-2xl font-bold">Creative + Technical</div>
+              <div className="font-label text-2xl font-bold text-white">Creative + Technical</div>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@ const Mission = () => (
     <div className="max-w-screen-xl mx-auto">
       <div className="grid md:grid-cols-3 gap-0">
         <div className="md:col-span-1 py-12 pr-12">
-          <h2 className="font-headline font-bold text-3xl tracking-tight mb-6">What We Focus On</h2>
+          <h2 className="font-headline font-bold text-3xl tracking-tight mb-6 text-white">What We Focus On</h2>
           <div className="h-1 w-20 bg-primary mb-6"></div>
           <p className="text-on-surface-variant font-body leading-relaxed">
             Good digital products are not built by visuals alone. They need the right planning, the right technology, readable presentation and a delivery team that understands business goals.
@@ -70,9 +70,9 @@ const Mission = () => (
             { icon: Activity, title: 'Continuous Improvement', desc: 'We keep pace with new techniques and update projects as requirements and platforms evolve.' },
             { icon: CheckCircle2, title: 'Readable Results', desc: 'A strong design improves presentation, usability and the overall trust a customer has in the business.' },
           ].map((item, i) => (
-            <div key={i} className="bg-white p-12 hover:bg-surface-container-high transition-colors group">
+            <div key={i} className="glass-card p-12 hover:bg-white/5 transition-colors group">
               <item.icon className="text-secondary mb-6" size={40} />
-              <h3 className="font-headline font-bold text-xl mb-3">{item.title}</h3>
+              <h3 className="font-headline font-bold text-xl mb-3 text-white">{item.title}</h3>
               <p className="text-sm text-on-surface-variant leading-relaxed">{item.desc}</p>
             </div>
           ))}
@@ -83,12 +83,12 @@ const Mission = () => (
 );
 
 const Specialists = () => (
-  <section className="py-24 px-6 bg-white">
+  <section className="py-24 px-6 bg-[#030509]">
     <div className="max-w-screen-xl mx-auto">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
           <span className="font-label text-xs font-bold text-secondary uppercase tracking-widest mb-2 block">Our Team</span>
-          <h2 className="font-headline font-extrabold text-4xl tracking-tight">How We Work Together</h2>
+          <h2 className="font-headline font-extrabold text-4xl tracking-tight text-white">How We Work Together</h2>
         </div>
         <p className="max-w-md text-on-surface-variant text-sm font-body">
           The uploaded content repeatedly points to a team model built on designers, developers, marketers and consultants working together instead of isolated delivery.
@@ -109,12 +109,12 @@ const Specialists = () => (
             <p className="text-slate-300 max-w-sm text-sm font-body">Every project combines creative design, technical implementation and continuous refinement after launch.</p>
           </div>
         </div>
-        <div className="md:col-span-4 bg-white p-8 flex flex-col justify-between border-l-4 border-secondary ghost-border">
+        <div className="md:col-span-4 glass-card p-8 flex flex-col justify-between border-l-4 border-secondary">
           <div>
-            <div className="w-20 h-20 rounded-full mb-6 bg-slate-100 flex items-center justify-center">
+            <div className="w-20 h-20 rounded-full mb-6 bg-white/10 flex items-center justify-center">
               <TerminalIcon className="text-secondary" size={28} />
             </div>
-            <h3 className="font-headline font-bold text-xl mb-1">Development Team</h3>
+            <h3 className="font-headline font-bold text-xl mb-1 text-white">Development Team</h3>
             <div className="text-secondary font-label text-xs font-bold uppercase mb-4">Frontend, backend and platform support</div>
             <p className="text-sm text-on-surface-variant leading-relaxed mb-6 font-body">From CMS websites to web apps and ERP systems, our developers focus on stable builds, maintainable code and scalable performance.</p>
           </div>
@@ -123,13 +123,13 @@ const Specialists = () => (
             <Brain className="text-slate-400 hover:text-secondary cursor-pointer" size={24} />
           </div>
         </div>
-        <div className="md:col-span-4 bg-surface-container-high p-8 group">
-          <h3 className="font-headline font-bold text-xl mb-1">Design and Content</h3>
+        <div className="md:col-span-4 glass-card p-8 group bg-white/[0.04]">
+          <h3 className="font-headline font-bold text-xl mb-1 text-white">Design and Content</h3>
           <div className="text-secondary font-label text-xs font-bold uppercase mb-4">Layout, graphics and messaging</div>
           <p className="text-sm text-on-surface-variant leading-relaxed mb-8 font-body">The design side of our team makes websites clearer, more attractive and easier for customers to understand and use.</p>
-          <div className="h-px w-full bg-slate-200/30 mb-6"></div>
+          <div className="h-px w-full bg-white/10 mb-6"></div>
           <div className="flex items-center justify-between">
-            <span className="font-label text-[10px] text-slate-500 uppercase tracking-widest">User-friendly focus</span>
+            <span className="font-label text-[10px] text-slate-400 uppercase tracking-widest">User-friendly focus</span>
             <ArrowRight className="text-secondary opacity-0 group-hover:opacity-100 transition-opacity" size={20} />
           </div>
         </div>
@@ -147,33 +147,33 @@ const Specialists = () => (
 );
 
 const Timeline = () => (
-  <section className="py-24 px-6 bg-white overflow-hidden">
+  <section className="py-24 px-6 bg-surface-container-low overflow-hidden">
     <div className="max-w-screen-xl mx-auto">
-      <h2 className="font-headline font-extrabold text-4xl mb-16 text-center">How Projects Move Forward</h2>
+      <h2 className="font-headline font-extrabold text-4xl mb-16 text-center text-white">How Projects Move Forward</h2>
       <div className="relative">
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-slate-200 hidden md:block"></div>
+        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-white/10 hidden md:block"></div>
         <div className="space-y-24">
           <div className="relative flex flex-col md:flex-row items-center gap-12 md:gap-0">
             <div className="md:w-1/2 md:pr-16 md:text-right">
-              <span className="font-label text-4xl font-bold text-slate-200 mb-2 block">01</span>
-              <h4 className="font-headline font-bold text-xl mb-3">Understand the Requirement</h4>
+              <span className="font-label text-4xl font-bold text-white/20 mb-2 block">01</span>
+              <h4 className="font-headline font-bold text-xl mb-3 text-white">Understand the Requirement</h4>
               <p className="text-sm text-on-surface-variant font-body">We begin with discussion, requirement gathering and clear planning around the client goal.</p>
             </div>
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white bg-secondary z-10 hidden md:block"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-[#0B0F19] bg-secondary z-10 hidden md:block"></div>
             <div className="md:w-1/2 md:pl-16">
-              <div className="bg-surface-container-low p-6 rounded-lg ghost-border">
+              <div className="glass-card p-6 rounded-lg">
                 <span className="font-label text-[10px] text-secondary font-bold uppercase">Planning Output</span>
-                <div className="text-2xl font-bold font-label mt-1">Scope and feature clarity</div>
+                <div className="text-2xl font-bold font-label mt-1 text-white">Scope and feature clarity</div>
               </div>
             </div>
           </div>
           <div className="relative flex flex-col md:flex-row-reverse items-center gap-12 md:gap-0">
             <div className="md:w-1/2 md:pl-16">
-              <span className="font-label text-4xl font-bold text-slate-200 mb-2 block">02</span>
-              <h4 className="font-headline font-bold text-xl mb-3">Design and Build</h4>
+              <span className="font-label text-4xl font-bold text-white/20 mb-2 block">02</span>
+              <h4 className="font-headline font-bold text-xl mb-3 text-white">Design and Build</h4>
               <p className="text-sm text-on-surface-variant font-body">Layouts, graphics, development and integrations are created around usability and business function.</p>
             </div>
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white bg-secondary z-10 hidden md:block"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-[#0B0F19] bg-secondary z-10 hidden md:block"></div>
             <div className="md:w-1/2 md:pr-16 text-right">
               <div className="ml-auto max-w-xs">
                 <DeliveryFlowVisual />
@@ -182,11 +182,11 @@ const Timeline = () => (
           </div>
           <div className="relative flex flex-col md:flex-row items-center gap-12 md:gap-0">
             <div className="md:w-1/2 md:pr-16 md:text-right">
-              <span className="font-label text-4xl font-bold text-slate-200 mb-2 block">03</span>
-              <h4 className="font-headline font-bold text-xl mb-3">Launch and Improve</h4>
+              <span className="font-label text-4xl font-bold text-white/20 mb-2 block">03</span>
+              <h4 className="font-headline font-bold text-xl mb-3 text-white">Launch and Improve</h4>
               <p className="text-sm text-on-surface-variant font-body">After delivery we continue with feedback, enhancements, performance tuning and marketing support where required.</p>
             </div>
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white bg-secondary z-10 hidden md:block"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full border-4 border-[#0B0F19] bg-secondary z-10 hidden md:block"></div>
             <div className="md:w-1/2 md:pl-16">
               <div className="flex items-center gap-4 text-secondary">
                 <Trophy size={48} />
@@ -202,7 +202,7 @@ const Timeline = () => (
 
 export default function About() {
   return (
-    <div className="bg-white">
+    <div className="bg-[#030509] text-slate-100">
       <Hero />
       <ClientLogosSlider />
       <Mission />

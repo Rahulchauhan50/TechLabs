@@ -18,7 +18,7 @@ const MarketingHero = () => (
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/10 border-l-2 border-secondary mb-6">
           <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary font-label">Digital Marketing</span>
         </div>
-        <h1 className="text-5xl md:text-7xl font-extrabold font-headline tracking-tight text-slate-900 mb-6">
+        <h1 className="text-5xl md:text-7xl font-extrabold font-headline tracking-tight text-white mb-6">
           Marketing that brings <span className="text-secondary">traffic, leads and visibility</span>.
         </h1>
         <p className="text-xl text-on-surface-variant leading-relaxed font-body">
@@ -30,20 +30,20 @@ const MarketingHero = () => (
 );
 
 const MarketingService = ({ icon: Icon, title, subtitle, description, stats, color }: any) => (
-  <motion.div whileHover={{ y: -5 }} className="bg-white p-10 ghost-border relative overflow-hidden group h-full flex flex-col">
+  <motion.div whileHover={{ y: -5 }} className="glass-card p-10 relative overflow-hidden group h-full flex flex-col">
     <div className={`absolute left-0 top-0 bottom-0 w-1 ${color}`}></div>
     <div className="flex items-center gap-4 mb-6">
-      <div className="w-12 h-12 bg-slate-50 flex items-center justify-center text-secondary">
+      <div className="w-12 h-12 bg-white/10 flex items-center justify-center text-secondary">
         <Icon size={24} />
       </div>
       <span className="font-label text-[10px] font-bold uppercase tracking-widest text-slate-400">{subtitle}</span>
     </div>
-    <h3 className="text-2xl font-bold font-headline mb-4 group-hover:text-secondary transition-colors">{title}</h3>
+    <h3 className="text-2xl font-bold font-headline mb-4 group-hover:text-secondary transition-colors text-white">{title}</h3>
     <p className="text-on-surface-variant font-body text-sm leading-relaxed mb-8 flex-grow">{description}</p>
-    <div className="pt-6 border-t border-slate-100">
+    <div className="pt-6 border-t border-white/10">
       <div className="flex items-center justify-between">
         <div className="text-xs font-bold font-label text-secondary uppercase tracking-widest">{stats.label}</div>
-        <div className="text-xl font-bold font-headline text-slate-900">{stats.value}</div>
+        <div className="text-xl font-bold font-headline text-white">{stats.value}</div>
       </div>
     </div>
   </motion.div>
@@ -116,7 +116,7 @@ export default function DigitalMarketing() {
       title: 'PPC and Paid Search Ads',
       description: 'Pay-per-click services, paid search ads and campaign management focused on targeted traffic and measurable lead generation.',
       stats: { label: 'Goal', value: 'Qualified leads' },
-      color: 'bg-slate-900',
+      color: 'bg-primary',
     },
     {
       icon: Share2,
@@ -137,9 +137,9 @@ export default function DigitalMarketing() {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-[#030509] text-slate-100">
       <MarketingHero />
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-surface-container-low">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, i) => (
@@ -149,9 +149,9 @@ export default function DigitalMarketing() {
         </div>
       </section>
       <StrategySection />
-      <section className="py-32 bg-white">
+      <section className="py-32 bg-[#030509]">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-extrabold font-headline tracking-tight mb-8">360 digital marketing support</h2>
+          <h2 className="text-4xl font-extrabold font-headline tracking-tight mb-8 text-white">360 digital marketing support</h2>
           <p className="text-on-surface-variant mb-12 font-body leading-relaxed">
             We help businesses with SEO, PPC, email, social media, local listings, strategy planning and ROI-focused campaign execution.
           </p>
@@ -159,7 +159,7 @@ export default function DigitalMarketing() {
             <Link href="/contact" className="bg-slate-900 text-white px-10 py-4 font-headline font-bold text-lg hover:bg-secondary transition-all cursor-pointer">
               Start Marketing Consultation
             </Link>
-            <Link href="/case-studies" className="bg-slate-100 text-slate-900 px-10 py-4 font-headline font-bold text-lg hover:bg-slate-200 transition-all cursor-pointer">
+            <Link href="/case-studies" className="glass-panel text-white border border-white/20 px-10 py-4 font-headline font-bold text-lg hover:bg-white/10 transition-all cursor-pointer">
               View Work Areas
             </Link>
           </div>
