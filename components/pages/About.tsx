@@ -25,7 +25,7 @@ const Hero = () => (
       <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="z-10">
         <span className="font-label text-secondary font-bold tracking-[0.2em] text-xs uppercase mb-4 block">About Manav Tech Labs</span>
         <h1 className="font-headline font-extrabold text-5xl md:text-7xl text-primary tracking-tighter mb-6 leading-none">
-          Built for practical <br /><span className="text-secondary">digital growth</span>
+          Built for practical  <br /><span className="text-secondary">digital growth</span>
         </h1>
         <p className="text-lg text-on-surface-variant max-w-md mb-8 leading-relaxed font-body">
           Manav Tech Labs brings together creative designing, graphic support, content planning, development and marketing execution so clients get one team for the full digital journey.
