@@ -9,7 +9,7 @@
         }
       ],
       "destination": "https://manavtechlabs.com/$1",
-      "permanent": true
+      "statusCode": 308
     },
     {
       "source": "/(.*)",
@@ -25,7 +25,7 @@
         }
       ],
       "destination": "https://manavtechlabs.com/$1",
-      "permanent": true
+      "statusCode": 308
     }
   ]
 }
