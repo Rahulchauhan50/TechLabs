@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from 'react';
 import { motion } from 'motion/react';
@@ -9,7 +9,7 @@ const ContactHero = () => (
     <div className="max-w-7xl mx-auto px-6 relative z-10">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-3xl">
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container/10 border-l-2 border-secondary mb-6">
-          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary font-label">Contact Internet Doctors</span>
+          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary font-label">Contact Manav Tech Labs</span>
         </div>
         <h1 className="text-5xl md:text-7xl font-extrabold font-headline tracking-tight text-white mb-6">
           Tell us about your <span className="text-secondary">project requirement.</span>
@@ -89,7 +89,7 @@ const ContactForm = () => (
                 </div>
                 <div>
                   <div className="font-bold font-headline text-lg text-white">Delivery Region</div>
-                  <p className="text-on-surface-variant font-body">Internet Doctors works with clients in Delhi NCR, India and the rest of the world.</p>
+                  <p className="text-on-surface-variant font-body">Manav Tech Labs works with clients in Delhi NCR, India and the rest of the world.</p>
                 </div>
               </div>
             </div>

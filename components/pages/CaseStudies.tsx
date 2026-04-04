@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -197,7 +197,7 @@ export default function CaseStudies() {
             Share your project category and business goal, and we will recommend the most relevant service mix.
           </p>
           <Link href="/contact" className="bg-secondary text-white px-10 py-4 font-headline font-bold text-lg hover:shadow-lg hover:bg-secondary/90 transition-all cursor-pointer inline-flex">
-            Talk to Internet Doctors
+            Talk to Manav Tech Labs
           </Link>
         </div>
       </section>

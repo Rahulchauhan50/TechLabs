@@ -1,14 +1,14 @@
-{
+﻿{
   "redirects": [
     {
       "source": "/(.*)",
       "has": [
         {
           "type": "host",
-          "value": "www.internetdoctors.in"
+          "value": "www.manavtechlabs.com"
         }
       ],
-      "destination": "https://internetdoctors.in/$1",
+      "destination": "https://manavtechlabs.com/$1",
       "permanent": true
     },
     {
@@ -16,7 +16,7 @@
       "has": [
         {
           "type": "host",
-          "value": "internetdoctors.in"
+          "value": "manavtechlabs.com"
         },
         {
           "type": "header",
@@ -24,7 +24,7 @@
           "value": "http"
         }
       ],
-      "destination": "https://internetdoctors.in/$1",
+      "destination": "https://manavtechlabs.com/$1",
       "permanent": true
     }
   ]

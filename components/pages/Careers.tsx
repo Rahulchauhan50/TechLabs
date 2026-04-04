@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from 'react';
 import { motion } from 'motion/react';
@@ -13,7 +13,7 @@ const CareersHero = () => (
           <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary font-label">Careers</span>
         </div>
         <h1 className="text-5xl md:text-7xl font-extrabold font-headline tracking-tight text-white mb-6">
-          Join the <span className="text-secondary">Internet Doctors team.</span>
+          Join the <span className="text-secondary">Manav Tech Labs team.</span>
         </h1>
         <p className="text-xl text-on-surface-variant leading-relaxed font-body">
           We work across website design, development, mobile apps, digital marketing, ERP software and lead generation. If that mix matches your strengths, we would like to hear from you.

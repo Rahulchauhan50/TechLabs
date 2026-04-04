@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from 'react';
 import { motion } from 'motion/react';
@@ -22,7 +22,7 @@ const MarketingHero = () => (
           Marketing that brings <span className="text-secondary">traffic, leads and visibility</span>.
         </h1>
         <p className="text-xl text-on-surface-variant leading-relaxed font-body">
-          Internet Doctors provides SEO, PPC, email marketing, social media marketing, digital consultancy and related services for businesses that want measurable online growth.
+          Manav Tech Labs provides SEO, PPC, email marketing, social media marketing, digital consultancy and related services for businesses that want measurable online growth.
         </p>
       </motion.div>
     </div>

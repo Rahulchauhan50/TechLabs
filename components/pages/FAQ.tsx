@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -154,7 +154,7 @@ const FAQCTA = () => (
       <p className="text-slate-400 mb-8 max-w-lg mx-auto font-body">If your question is not covered here, send your requirement and we will respond with a more specific recommendation.</p>
       <div className="flex flex-wrap justify-center gap-4">
         <Link href="/contact" className="bg-secondary text-white px-8 py-4 font-bold tracking-tight hover:shadow-xl hover:shadow-secondary/20 transition-all cursor-pointer">
-          Contact Internet Doctors
+          Contact Manav Tech Labs
         </Link>
       </div>
     </div>

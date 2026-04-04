@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from 'react';
 import { motion } from 'motion/react';
@@ -24,7 +24,7 @@ const GameDevelopmentHero = () => (
             ENGAGING <br /><span className="text-secondary">GAME DEVELOPMENT</span>
           </h1>
           <p className="text-lg text-on-surface-variant max-w-xl leading-relaxed font-body">
-            Internet Doctors provides comprehensive game development services, creating immersive and interactive experiences for mobile, PC, and web platforms.
+            Manav Tech Labs provides comprehensive game development services, creating immersive and interactive experiences for mobile, PC, and web platforms.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="bg-slate-900 text-white px-8 py-4 font-label text-xs uppercase tracking-widest font-bold shadow-lg hover:shadow-secondary/20 transition-all active:scale-95 cursor-pointer">

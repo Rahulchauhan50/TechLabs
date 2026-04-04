@@ -1,8 +1,8 @@
-import About from '../../components/pages/About';
+﻿import About from '../../components/pages/About';
 
 export const metadata = {
-  title: "About Internet Doctors",
-  description: "Learn about Internet Doctors, a digital services company delivering website design, development, app solutions, marketing support and ERP software.",
+  title: "About Manav Tech Labs",
+  description: "Learn about Manav Tech Labs, a digital services company delivering website design, development, app solutions, marketing support and ERP software.",
 };
 
 export default function Page() {

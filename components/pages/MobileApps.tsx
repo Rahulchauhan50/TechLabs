@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from 'react';
 import { motion } from 'motion/react';
@@ -25,7 +25,7 @@ const MobileAppsHero = () => (
             ANDROID AND IOS <br /><span className="text-secondary">APP DEVELOPMENT</span>
           </h1>
           <p className="text-lg text-on-surface-variant max-w-xl leading-relaxed font-body">
-            Internet Doctors offers mobile app development services for small and large entrepreneurs, with consulting-led planning, strong platform compatibility and timely delivery.
+            Manav Tech Labs offers mobile app development services for small and large entrepreneurs, with consulting-led planning, strong platform compatibility and timely delivery.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="bg-slate-900 text-white px-8 py-4 font-label text-xs uppercase tracking-widest font-bold shadow-lg hover:shadow-secondary/20 transition-all active:scale-95 cursor-pointer">
